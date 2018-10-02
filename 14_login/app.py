@@ -14,7 +14,7 @@ def login_screen():
     if 'username' in session:
         return render_template('welcome.html', username=session['username'])
     else:
-        return render_template('login.html', username='')
+        return render_template('login.html')
 
 @app.route('/logout')
 def logout():
@@ -24,12 +24,7 @@ def logout():
 @app.route('/error')
 def error(type):
     session.pop('username')
-    if type == 'username':
-        newError = 'Username does not exist'
-    elif type == 'passwd':
-        newError = 'Wrong password'
-    else:
-        newError = 'Hmmm....'
+    newError = type
     return render_template('error.html',
                            error = newError)
     
@@ -56,11 +51,10 @@ def authenticate():
     if username in d and d[username] == password:
         return redirect(url_for('welcome'))
     elif username not in d:
-        return error('username')
-    elif d[username] != password:
-        return error('passwd')
+        return error('Username does not exist')
     else:
-        return error('other')
+        return error('Wrong password')
+
 
 @app.route('/welcome')
 def welcome():
