@@ -1,8 +1,0 @@
-<!DOCTYPE html>
-<html>
-  <head></head>
-  <body>
-    <p>{{error}}</p> 
-  </body>
-
-</html>
