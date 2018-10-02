@@ -29,10 +29,10 @@ def error(type):
                            error = newError)
     
 
-@app.route('/auth')
+@app.route('/auth', methods=["POST"])
 def authenticate():
-    username = request.args['username']
-    password = request.args['password']
+    username = request.form['username']
+    password = request.form['password']
 
     session['username'] = username
 
@@ -63,4 +63,5 @@ def welcome():
 
 if __name__ == '__main__':
     app.debug = True
+    app.run()
     app.run()
