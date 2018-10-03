@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% block head %}
+    <title>{% block title %}{% endblock %} - My Foist Webpage</title>
+    {% endblock %}
+  </head>
+  <body>
+
+    <h1 style="color:red">My Foist Webpage</h1>
+    {% block header %}}
+    {% endblock %}
+    
+    {% block content %}
+    {% endblock %}
+    
+    {% block footer %}
+    <br>&copy; Copyright Team xD
+    {% endblock %}
+  </body>
+</html>

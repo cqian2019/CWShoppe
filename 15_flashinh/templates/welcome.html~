@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %} Welcome {% endblock %}
+{% block content %}
+<p> Welcome {{ name }}! </p>
+  <form action="/logout">
+    <button type="submit">Logout</button>
+  </form>
+  
+{% endblock %}
