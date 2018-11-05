@@ -1,0 +1,31 @@
+body {
+background-color: grey;
+font-family: Arial;
+}
+h1 {
+text-align: center;
+color: white;
+background-color: #BEBEBE;
+}
+ul {
+list-style-type: none;
+padding: 0px;
+}
+li {
+color: #BEBEBE;
+text-decoration: none;
+}
+h2 {
+margin-left: 200px;
+margin-top: -110px;
+}
+p {
+margin-left: 200px;
+margin-top: -10px;
+}
+footer {
+background-color:#575757;
+text-align:right;
+padding:10px;
+color: #6E6E6E;
+}
