@@ -7,20 +7,21 @@ K21 -- Who Does Frame Work For?
 ---->
 <html class="no-js" lang="en" dir="ltr">
   <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0/dist/css/foundation.min.css" integrity="sha256-VEEaOnBKVRoYPn4AID/tY/XKVxKEqXstoo/xZ6nemak= sha384-D46t32f421/hB30qwnim2pIcisNN5GU9+6m2Mfnd3dKpTSFidZLa08/1StEiCFId sha512-WkgzH8VKemDfwrp18r+wgbx+oHXOkfd2kJs7ocAXdGDgonXDXh88E90IRtRZRXtO0IHprxYHYlY14h+wyTsUDA==" crossorigin="anonymous">
+    <title>All About Foundation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0/dist/css/foundation.min.css">
     <link rel="stylesheet" href="app.css">
   </head>
   <body>
     <div class = "grid-container">
       <div class = "grid-x grid-padding-x">
-	<h1>All About Foundation</h1>
+	<h1>All About Foundation<small> by Team Sephora </small></h1>
       </div>
     </div>
 
-    <div class ="grid-y medium-grid-frame">
+
       <div class="grid-x grid-padding-x">
 	<div class = "cell medium-2  medium-cell-block-y">
-	  <ul class="vertical menu">
+	  <div class="vertical menu">
 	    <li><a href="#a1"><b>About</b></a></li>
 	    <li><a href="#a2"><b>Setup</b></a></li>
 	    <li><a href="#a3"><b>Features</b></a>
@@ -34,13 +35,13 @@ K21 -- Who Does Frame Work For?
 	      </ul>
 	    </li>
 	    <li><a href="#a4"><b>Resources</b></a></li>
-	  </ul>
+	  </div>
 	</div>
 	<div class = "cell medium-10  medium-cell-block-y">
 	  <h2 id="a1">About</h2>
 	  <p>Foundation is one of many front-end frameworks you can use to build your website. You can access and modify a library of standardized CSS components, rather than building everything from scratch. This site showcases some of the most basic features of Foundation, with instructions to help you get started using it for your own projects. Some additional resources for more detailed documentation are included as well, once you've exhausted what we have on our site!</p>
 	  <div class="callout primary" data-closeable>
-	    Before we get started, be sure to open up index.html and keep the source code handy! <br>Each feature shown will also include a reference to the specific lines in which it's implemented.
+	   <b> Before we get started, be sure to keep the source code handy! </b><br>Each feature shown will include a reference to the specific lines in which it's implemented. <br>Right click and select <kbd>View page source</kbd> to open the source code in a new tab.
 	    <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
 	      <span aria-hidden="true">&times;</span>
 	    </button>
@@ -50,7 +51,7 @@ K21 -- Who Does Frame Work For?
 	  <p>The fastest way to start using the Foundation features showcased on this site is to simply add the CDN link into your HTML head section.
 	    <br>
 	    <br>
-	    <code> &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0/dist/css/foundation.min.css" integrity="sha256-VEEaOnBKVRoYPn4AID/tY/XKVxKEqXstoo/xZ6nemak= sha384-D46t32f421/hB30qwnim2pIcisNN5GU9+6m2Mfnd3dKpTSFidZLa08/1StEiCFId sha512-WkgzH8VKemDfwrp18r+wgbx+oHXOkfd2kJs7ocAXdGDgonXDXh88E90IRtRZRXtO0IHprxYHYlY14h+wyTsUDA==" crossorigin="anonymous"&gt; </code>
+	    <code> &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0/dist/css/foundation.min.css"&gt; </code>
 	    <br>
 	    Alternatively, download the complete version <a href="https://foundation.zurb.com/sites/download/">here</a> for all the features available in the framework.
 	  </p>
@@ -58,7 +59,7 @@ K21 -- Who Does Frame Work For?
 	  <h2 id="a3">Features</h2>
 	  <hr>
 	  <h3 id="b1">XY Grid</h3>
-	  <p>An XY grid system is used in Foundation to separate a webpage into grids, and grids into cells and cell-blocks. In this site, the menu and content are separated into two y-cell blocks, and both blocks are contained in a grid-y. The heading is in a separate grid-x.
+	  <p>An XY grid system is used in Foundation to separate a webpage into grids, and grids into cells and cell-blocks. In this site, the menu and content are separated into two y-cell blocks, and both blocks are contained in a grid-y. The heading is in a separate grid-x. <strong>Refer to lines 58-97 for the source code of this grid.</strong>
 	    <br>
 	    
 	   <div class="grid-x grid-padding-x">
@@ -69,7 +70,7 @@ K21 -- Who Does Frame Work For?
           <div class="grid-x grid-padding-x">
             <div class="large-12 cell">
               <div class="primary callout">
-                <p>This is a 12 cell section. <strong>Refer to lines 58-97 for the source code of the grid.</strong></p>
+                <p>This is a 12 cell section.</p>
               </div>
             </div>
           </div>
@@ -102,9 +103,27 @@ K21 -- Who Does Frame Work For?
               </div>
             </div>
           </div>
+	  <br>
+	  <p>You can also control how many cells to display in each row, based on the screen size. In this grid, large screens display 6 cells per row, medium screens display 4 cells, and small screens display 2 cells. Try resizing your window to see how these cells shift! <strong>Refer to lines 107-120.</strong></p>
+	  <br>
+	  <div class="grid-x grid-padding-x small-up-2 medium-up-4 large-up-6">
+	    <div class="cell"><div class="callout primary">cell</div></div>
+	    <div class="cell"><div class="callout primary">cell</div></div>
+	    <div class="cell"><div class="callout primary">cell</div></div>
+	    <div class="cell"><div class="callout primary">cell</div></div>
+	    <div class="cell"><div class="callout primary">cell</div></div>
+	    <div class="cell"><div class="callout primary">cell</div></div>
+	    <div class="cell"><div class="callout primary">cell</div></div>
+	    <div class="cell"><div class="callout primary">cell</div></div>
+	    <div class="cell"><div class="callout primary">cell</div></div>
+	    <div class="cell"><div class="callout primary">cell</div></div>
+	    <div class="cell"><div class="callout primary">cell</div></div>
+	    <div class="cell"><div class="callout primary">cell</div></div>
+	  </div>
+	  
 	  <hr>
 	  <h3 id="b2">Typography</h3>
-	  <p>Typography in Foundation gives you a set of simple default styles that look good together when building a rudimentary site. You can modify them to your own liking. Here's an example of some typographical features. <strong>Refer to lines 103-131 for the features shown below.</strong></p>
+	  <p>Typography in Foundation gives you a set of simple default styles that look good together when building a rudimentary site. You can modify them to your own liking. Here's an example of some typographical features. <strong>Refer to lines 103-131.</strong></p>
 	  <br>
 	  <div class="callout primary">
 	  <h1>Here are some headers!</h1>
@@ -210,25 +229,63 @@ K21 -- Who Does Frame Work For?
 	  <div class="callout alert">
 	    And they come in a variety of colors.
 	  </div>
-	  <div class="card">
-	    <div class="card-section">
-	      <img src="thumbnail.jpg">
-	    </div>
-	    <div class="card-section">
-	      <p>This is a section of a card.</p>
+	  <div class="grid-container">
+	    <div class="grid-x grid-padding-x small-up-2 medium-up-3">
+	      <div class="cell">
+		<div class="card">
+		  <div class="card-section">
+		    <img src="thumbnail.jpg">
+		  </div>
+		  <div class="card-section">
+		    <p>This is a section of a card.</p>
+		  </div>
+		</div>
+	      </div>
+	      <div class="cell">
+		<div class="card">
+		  <div class="card-section">
+		    <img src="thumbnail.jpg">
+		  </div>
+		  <div class="card-section">
+		    <p>This is a another section of a card.</p>
+		  </div>
+		</div>
+	      </div>
 	    </div>
 	  </div>
+
+
 	  <hr>
 	  <h3 id="b6">Media</h3>
 	  <p>Here are some features for displaying media on your site.<strong>Refer to lines 219-224.</strong></p>
 	  <div class="callout primary">
-	    <p>You can embed videos...</p>
-	  <div class="responsive-embed">
-	    <iframe width="420" height="315" src="https://www.youtube.com/watch?v=_Fpw7Z0Ncgg" frameborder="0" allowfullscreen></iframe>
-	  </div>
+	    <p>You can add progress bars on each page...</p>
+	    <div class="secondary progress" role="progressbar" tabindex="0" aria-valuenow="25" aria-valuemin="0" aria-valuetext="25 percent" aria-valuemax="100">
+	      <div class="progress-meter" style="width: 25%"></div>
+	    </div>
+
+	    <div class="success progress">
+	      <div class="progress-meter" style="width: 50%"></div>
+	    </div>
+
+	    <div class="warning progress">
+	      <div class="progress-meter" style="width: 50%"></div>
+	    </div>
+
+	    <div class="alert progress">
+	      <div class="progress-meter" style="width: 75%"></div>
+	    </div>
+	    <p>...or add labels to emphasize an element...</p>
+	    <span class="label primary">Primary Label</span>
+	    <span class="label secondary">Secondary Label</span>
+	    <span class="label success">Success Label</span>
+	    <span class="label alert">Alert Label</span>
+	    <span class="label warning">Warning Label</span>
+	    <br>
+	    <br>
 	    <p>...or apply a class to turn into an image into a thumbnail.</p>
 	    <img class="thumbnail" src="thumbnail.jpg">
-	  
+	    
 	  </div>
 	  
 	  <hr>
@@ -236,11 +293,6 @@ K21 -- Who Does Frame Work For?
 	  <p>For more documentation, visit <a href="https://foundation.zurb.com/sites/docs/">Foundation's website.</a></p>
 	  <hr>
 	</div>
-	   </div>
 	   
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/what-input.js"></script>
-    <script src="js/vendor/foundation.js"></script>
-    <script src="js/app.js"></script>
   </body>
 </html>
