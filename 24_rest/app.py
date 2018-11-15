@@ -1,15 +1,17 @@
-import urllib, json
-from flask import Flask
+import urllib.request, json, ssl
+
+from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    j = urllib.request.urlopen("https://api.nasa.gov/planetary/earth/imagery/?lon=100.75&lat=1.5&date=2014-02-01&cloud_score=True&api_key=8RmXLa9SUmJOSTLZfpSB8rQQDBV0Sq6hpmumfL6y")
-    d = json.loads(json_data.read())
+    ctxt = ssl._create_unverified_context()
+    j = urllib.request.urlopen("https://api.nasa.gov/planetary/apod?api_key=6SpISNmlk1rhPfAoxzNkcS3af2BU1EIZlmtWSnbJ", context = ctxt)
+    d = json.loads(j.read())
     print(d["url"])
-    return render_template('main.html', url = d["url"], planet = d["resource"]["planet"])
+    return render_template('index.html',planet= d["title"],url = d["url"])
 
 
 if __name__ == '__main__':
     app.debug = True
-app.run()
+    app.run()
