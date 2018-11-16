@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>API Demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0/dist/css/foundation.min.css">
+  </head>
+  <body>
+
+    <h1>API Demo Page</h1>
+    <br>
+    <p>Demos of some APIs from our <a href = 'https://drive.google.com/drive/folders/0B9IBLjv6_7y6eExpYkdGNmRpZ3c'>SoftDev API knowledge base.</a></p>
+    <br>
+    <h2>NYC Open Data API</h2>
+    <hr>
+    <p>{{nyc}}</p>
+    <h2>Metropolitan Museum of Art Collection API</h2>
+    <hr>
+    <p>{{met}}</p>
+    <h2>New York Times Article Search API</h2>
+    <hr>
+    <p>{{nyt}}</p>
+  </body>
+</html>
